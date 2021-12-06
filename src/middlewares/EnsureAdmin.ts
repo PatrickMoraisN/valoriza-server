@@ -6,7 +6,7 @@ class EnsureAdmin {
     const admin = true;
 
     if (!admin) {
-      return response.status(400).json({ error: 'Unauthorized' });
+      return response.status(401).json({ error: 'Unauthorized' });
     }
     return next();
   }
