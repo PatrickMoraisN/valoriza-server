@@ -2,7 +2,11 @@ import { NextFunction, Request, Response } from 'express';
 import { verify } from 'jsonwebtoken';
 
 export interface IRequest extends Request {
-  user_id: string | (() => string);
+  user_id: string;
+}
+
+interface IVerifyPayload {
+  sub: string;
 }
 
 class EnsureAuthenticated {
@@ -16,7 +20,10 @@ class EnsureAuthenticated {
     const [, authToken] = token.split(' ');
 
     try {
-      const { sub } = verify(authToken, process.env.JWT_SECRET);
+      const { sub } = verify(
+        authToken,
+        process.env.JWT_SECRET
+      ) as IVerifyPayload;
       request.user_id = sub;
       return next();
     } catch (error) {
