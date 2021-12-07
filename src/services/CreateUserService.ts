@@ -1,4 +1,5 @@
 import { getCustomRepository } from 'typeorm';
+import { classToPlain } from 'class-transformer';
 import { hash } from 'bcryptjs';
 import { UsersRepositories } from '../repositories/UsersRepositories';
 
@@ -34,7 +35,7 @@ class CreateUserService {
 
     await usersRepository.save(user);
 
-    return user;
+    return classToPlain(user);
   }
 }
 
