@@ -2,8 +2,8 @@
 <br />
 
 # :pushpin: Índice
-- [Banco de Dados](#package-banco_de_dados)
-- [Regras da Aplicação](#scroll-regras_da_aplicação)
+- [Banco de Dados](#package-banco-de-dados)
+- [Regras da Aplicação](#scroll-regras-da-aplicação)
 - [Rotas](#mailbox_closed-Rotas)
 - [Mídia](#camera_flash-mídia)
 - [Sobre](#monocle_face-sobre)
