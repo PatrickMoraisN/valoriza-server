@@ -5,7 +5,7 @@
 - [Banco de Dados](#package-banco_de_dados)
 - [Regras da Aplicação](#scroll-regras_da_aplicação)
 - [Rotas](#mailbox_closed-Rotas)
-- [Mídia](camera_flash-mídia)
+- [Mídia](#camera_flash-mídia)
 - [Sobre](#monocle_face-sobre)
 - [Tecnologias](#rocket-tecnologias)
 - [Instalação](#hammer_and_wrench-instalação)
