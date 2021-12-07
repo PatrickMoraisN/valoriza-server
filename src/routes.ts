@@ -5,6 +5,7 @@ import { CreateTagController } from './controllers/CreateTagController';
 import { CreateUserController } from './controllers/CreateUserController';
 import { ListTagController } from './controllers/ListTagController';
 import { ListUserReceivedComplimentsController } from './controllers/ListUserReceivedComplimentsController';
+import { ListUsersController } from './controllers/ListUsersController';
 import { ListUserSendComplimentsController } from './controllers/ListUserSendComplimentsController';
 import { EnsureAdmin } from './middlewares/EnsureAdmin';
 import { EnsureAuthenticated } from './middlewares/EnsureAuthenticated';
@@ -20,6 +21,7 @@ const listUserSendComplimentsController =
 const listUserReceivedComplimentsController =
   new ListUserReceivedComplimentsController();
 const listTagController = new ListTagController();
+const listUsersController = new ListUsersController();
 
 const ensureAdmin = new EnsureAdmin();
 const ensureAuthenticated = new EnsureAuthenticated();
@@ -51,5 +53,7 @@ router.get(
 );
 
 router.get('/tags', ensureAuthenticated.handle, listTagController.handle);
+
+router.get('/users', ensureAuthenticated.handle, listUsersController.handle);
 
 export { router };
